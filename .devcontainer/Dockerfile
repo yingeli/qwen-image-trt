@@ -15,6 +15,8 @@ RUN apt-get update && \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install onnx onnxruntime onnxscript troch diffusers
+
 # Install Claude Code
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh | bash - && \
     apt-get update && \
