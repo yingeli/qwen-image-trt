@@ -13,7 +13,7 @@ from diffusers import QwenImageTransformer2DModel
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_path", type=str, default='Qwen/Qwen-Image',
+    parser.add_argument("--model_path", type=str, default='Qwen/Qwen-Image-Edit-2509',
                         help="Qwen-Image model path or hf model id")
     parser.add_argument("--onnx_path", type=str, default='transformer.onnx',
                         help="ONNX path of exported Qwen-Image\'s dit")
