@@ -42,3 +42,6 @@ RUN userdel -r ubuntu && \
     echo "coder ALL=(ALL) NOPASSWD:ALL" >>/etc/sudoers.d/nopasswd
 
 USER coder
+
+# Install Claude Code
+RUN curl -fsSL https://claude.ai/install.sh | bash
