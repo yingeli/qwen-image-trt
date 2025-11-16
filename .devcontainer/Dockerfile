@@ -15,8 +15,6 @@ RUN apt-get update && \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install onnx onnxruntime onnxscript torch diffusers
-
 # Generate the desired locale (en_US.UTF-8)
 RUN locale-gen en_US.UTF-8
 
@@ -35,6 +33,8 @@ RUN userdel -r ubuntu && \
     echo "coder ALL=(ALL) NOPASSWD:ALL" >>/etc/sudoers.d/nopasswd
 
 USER coder
+
+# RUN pip install onnx onnxruntime onnxscript torch diffusers
 
 # Install Claude Code
 RUN curl -fsSL https://claude.ai/install.sh | bash
