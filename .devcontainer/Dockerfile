@@ -17,13 +17,6 @@ RUN apt-get update && \
 
 RUN pip install onnx onnxruntime onnxscript torch diffusers
 
-# Install Claude Code
-RUN curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh | bash - && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends nodejs npm && \
-    rm -rf /var/lib/apt/lists/* && \
-    npm install -g @anthropic-ai/claude-code
-
 # Generate the desired locale (en_US.UTF-8)
 RUN locale-gen en_US.UTF-8
 
